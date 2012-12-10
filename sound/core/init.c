@@ -912,6 +912,7 @@ int snd_card_file_remove(struct snd_card *card, struct file *file)
 		return -ENOENT;
 	}
 	kfree(found);
+	snd_card_unref(card);
 	return 0;
 }
 
