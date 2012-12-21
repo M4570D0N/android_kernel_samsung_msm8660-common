@@ -1614,22 +1614,22 @@ choice
 	config TARGET_SERIES_Q1
 		bool "SERIES_CELOX"
 		help
-		  Support models of q1 series		  
+		  Support models of q1 series
 
 	config TARGET_SERIES_P5LTE
 		bool "SERIES_P5LTE"
 		help
-		  Support models of p5lte series		  
+		  Support models of p5lte series
 
 	config TARGET_SERIES_P4LTE
 		bool "SERIES_P4LTE"
 		help
-		  Support models of p4lte series		  
+		  Support models of p4lte series
 
 	config TARGET_SERIES_P8LTE
 		bool "SERIES_P8LTE"
 		help
-		  Support models of p8lte series		  
+		  Support models of p8lte series
 endchoice
 
 choice
@@ -1655,12 +1655,12 @@ choice
 		bool "Locale EUR "
 		help
 		  Support EUR Board
-		  
+
 	config TARGET_LOCALE_HKTW
 		bool "Locale HKTW "
 		help
 		  Support HKTW Board
-		  
+
 endchoice
 
 choice
@@ -1675,7 +1675,7 @@ choice
 		config KOR_OPERATOR_LGU
 			bool "LGU"
 		config KOR_OPERATOR_OPEN
-			bool "OPEN"			
+			bool "OPEN"
 endchoice
 
 choice
@@ -1688,9 +1688,9 @@ choice
 
 		config USA_OPERATOR_TMO
 			bool "USA Operator TMO"
-			
+
 		config CAN_OPERATOR_RWC
-			bool "CAN Operator RWC"			
+			bool "CAN Operator RWC"
 endchoice
 
 choice
@@ -1708,7 +1708,7 @@ choice
 		depends on TARGET_LOCALE_EUR
 
 		config EUR_OPERATOR_OPEN
-			bool "OPEN"			
+			bool "OPEN"
 endchoice
 
 choice
@@ -1738,7 +1738,7 @@ choice
 			bool "SHV-E140L"
 		config KOR_MODEL_SHV_E150S
 			bool "SHV-E150S"
-			
+
 endchoice
 
 choice
@@ -1749,24 +1749,24 @@ choice
 			bool "USA ATT SGH-I717"
 
 		config USA_MODEL_SGH_I727
-                depends on (TARGET_LOCALE_USA && (USA_OPERATOR_ATT || CAN_OPERATOR_RWC) )
-                        default y
+			depends on (TARGET_LOCALE_USA && (USA_OPERATOR_ATT || CAN_OPERATOR_RWC) )
+			default y
 			bool "USA ATT SGH-I727"
-			
-			
-		config USA_MODEL_SGH_I757 
+
+
+		config USA_MODEL_SGH_I757
 		    bool "USA ATT SGH-I757"
 
 		config USA_MODEL_SGH_T989
 			bool "USA ATT SGH-T989"
- 
+
 		config USA_MODEL_SGH_T769
 		    bool "USA TMO SGH-T769"
 
 		config USA_MODEL_SGH_I957
 			bool "USA ATT SGH-I957"
 
-        config USA_MODEL_SGH_I577 
+        config USA_MODEL_SGH_I577
         	bool "USA ATT SGH-I577"
 
 endchoice
@@ -1780,15 +1780,15 @@ choice
 			bool "GT-P7320"
 endchoice
 
-config USA_MODEL_SGH_I727R 
+config USA_MODEL_SGH_I727R
 		depends on (USA_MODEL_SGH_I727)
-                default n 
+                default n
 		bool "USA ATT SGH-I727R"
 
 config USA_MODEL_SGH_T989D
-                depends on (USA_MODEL_SGH_T989)
-                default n             
-                bool "USA TMO SGH-T989D"
+		depends on (USA_MODEL_SGH_T989)
+		default n
+			bool "USA TMO SGH-T989D"
 
 config BT_MGMT
 	bool "Bluetooth Mgmt"
@@ -1805,7 +1805,7 @@ choice
 
 		config JPN_MODEL_SC_05D
 			bool "JPN NTT SC-05D"
-			
+
 		config JPN_MODEL_SC_07D
 			bool "JPN NTT SC-07D"
 endchoice
@@ -1819,15 +1819,15 @@ config SAMSUNG_MEMORY_LAYOUT_ARRANGE
 	default n
 
 config USA_MODEL_SGH_T879
-    bool "USA TMO SGH-T879"	
+    bool "USA TMO SGH-T879"
 	depends on TARGET_LOCALE_USA && USA_MODEL_SGH_I717
-    default n		
+    default n
 
 config HKTW_MODEL_GT_N7005
 			bool "HKTW OPEN GT-N7005"
 			depends on TARGET_LOCALE_HKTW
-	    default n		
-			
+	    default n
+
 config EUR_MODEL_GT_I9210
 	default n
 	depends on USA_MODEL_SGH_I727
@@ -2225,7 +2225,7 @@ config VP_A2220
 	depends on I2C
 	help
 	  A2220 Voice Processor Driver implemented by ysseo.
-  
+
 config MSM_ULTRASOUND
 	bool "MSM ultrasound support"
 	depends on MSM_AUDIO_QDSP6
@@ -2410,6 +2410,6 @@ config ATHEROS_WIFI
 	bool "ATHEROS WIFI"
 
 config NL80211_TESTMODE
-	bool "NL80211 TESTMODE" 
+	bool "NL80211 TESTMODE"
 
 endif

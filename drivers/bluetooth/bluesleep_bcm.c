@@ -109,6 +109,9 @@ static struct hci_dev *bluesleep_hdev;
 static struct platform_device *bluesleep_uart_dev;
 static struct bluesleep_info *bsi;
 
+/* module usage */
+static atomic_t open_count = ATOMIC_INIT(1);
+
 /*
  * Local function prototypes
  */
@@ -954,3 +957,4 @@ MODULE_DESCRIPTION("Bluetooth Sleep Mode Driver ver %s " VERSION);
 #ifdef MODULE_LICENSE
 MODULE_LICENSE("GPL");
 #endif
+
