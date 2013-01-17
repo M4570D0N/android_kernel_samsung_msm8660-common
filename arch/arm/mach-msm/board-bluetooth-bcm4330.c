@@ -31,7 +31,8 @@
 #include <linux/rfkill.h>
 #include <linux/wakelock.h>
 #include <asm/mach-types.h>
-
+#include <mach/board-msm8660.h>
+#include <mach/gpio.h>
 #include "devices.h"
 
 #define BT_UART_CFG
@@ -300,7 +301,7 @@ static int __init bcm4330_bluetooth_init(void)
 	gpio_rev_init();
     printk(KERN_ERR "[BT] bcm4330_bluetooth_init \n");
 	platform_device_register(&msm_bluesleep_device);
-	bluesleep_setup_uart_port(&msm_device_uart_dm6);
+	bluesleep_setup_uart_port(&msm_device_uart_dm12);
 #endif
 	return platform_driver_register(&bcm4330_bluetooth_platform_driver);
 }
@@ -320,4 +321,3 @@ module_exit(bcm4330_bluetooth_exit);
 MODULE_ALIAS("platform:bcm4330");
 MODULE_DESCRIPTION("bcm4330_bluetooth");
 MODULE_LICENSE("GPL");
-
