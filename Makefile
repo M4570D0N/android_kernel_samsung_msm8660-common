@@ -1,10 +1,6 @@
 VERSION = 3
 PATCHLEVEL = 0
-<<<<<<< HEAD
 SUBLEVEL = 60
-=======
-SUBLEVEL = 58
->>>>>>> Merge Linux 3.0.57-58
 EXTRAVERSION =
 NAME = Sneaky Weasel
 
